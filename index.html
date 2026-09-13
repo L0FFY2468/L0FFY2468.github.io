@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102f4c" />
+    <title>whodis — classroom attendance, simplified</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="polish.css" />
+  </head>
+  <body>
+    <div class="top-line"><span class="pulse"></span> RFID attendance made simple for every classroom</div>
+    <header>
+      <a class="brand" href="#top"><span class="brand-dot">w</span>whodis<span class="brand-mark">.</span></a>
+      <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#results">Reviews</a><a href="#why">Why whodis</a></nav>
+      <a class="header-cta" href="#demo">Buy now <span>→</span></a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">ROLL CALL, REIMAGINED <span></span></p>
+          <h1>Every tap tells<br />you <em>who’s here.</em></h1>
+          <p class="hero-text">whodis turns a quick RFID-card tap into an accurate, live attendance record — so teachers can start teaching.</p>
+          <div class="hero-actions"><a class="button dark" href="#demo">Bring whodis to your school <span>→</span></a><a class="quiet-link" href="#how-it-works">See it in action <span>↓</span></a></div>
+          <div class="trusted"><span class="mini-stack"><i>✓</i><i>✓</i><i>✓</i></span><p><b>Built for busy classrooms</b><br />Simple enough for the first bell.</p></div>
+        </div>
+        <div class="dashboard-wrap" aria-label="Live attendance dashboard preview">
+          <div class="paper paper-one"></div><div class="paper paper-two"></div>
+          <section class="dashboard">
+            <div class="dash-top"><div><small>WHODIS / LIVE SESSION</small><h2>Class 4C · Science</h2><p>Tuesday, 13 September · 08:00–09:00</p></div><span class="live"><i></i> LIVE</span></div>
+            <div class="status-row"><div class="status-card"><small>PRESENT</small><strong>26</strong><span>of 30 students</span></div><div class="status-card late"><small>LATE</small><strong>01</strong><span>checked in after 08:05</span></div><div class="status-card absent"><small>ABSENT</small><strong>03</strong><span>awaiting confirmation</span></div></div>
+            <div class="dash-middle"><div class="scan-card"><div class="scan-icon"><span></span><span></span><span></span><b>⌁</b></div><p>Waiting for<br /><b>the next tap</b></p><small>RFID READER ONLINE</small></div><div class="recent"><div class="recent-title"><b>Just checked in</b><small>TIME</small></div><div class="student"><span class="avatar a1">A</span><p><b>Aina Sofea</b><small>Student ID · 00428</small></p><time>08:01</time><i>✓</i></div><div class="student"><span class="avatar a2">M</span><p><b>Marcus Lim</b><small>Student ID · 00431</small></p><time>08:02</time><i>✓</i></div><div class="student"><span class="avatar a3">N</span><p><b>Nadia H.</b><small>Student ID · 00429</small></p><time>08:03</time><i>✓</i></div></div></div>
+            <div class="dash-footer"><span><i></i> Reader 01 connected</span><button type="button" id="demo-tap">Simulate card tap <b>+</b></button></div>
+          </section>
+          <div class="tag tag-one">no more<br /><b>“present, sir!”</b></div><div class="tag tag-two">tap<br />in ✓</div>
+        </div>
+      </section>
+      <section class="numbers"><div><strong>2 sec</strong><span>to check in</span></div><div><strong>100%</strong><span>digital record</span></div><div><strong>0</strong><span>names called aloud</span></div><p>More time for learning.<br /><em>Less time taking attendance.</em></p></section>
+      <section class="how" id="how-it-works">
+        <div class="section-intro"><p class="eyebrow">HOW IT WORKS <span></span></p><h2>Tap. Track.<br /><em>Teach.</em></h2><p>whodis makes attendance feel as natural as walking into class. No paper sheets, no manual count, no guessing.</p></div>
+        <div class="steps"><article><span class="step-number">01</span><div class="step-art reader-art"><b>⌁</b><i></i><i></i><i></i></div><h3>Tap an RFID card</h3><p>Students tap their card on the reader as they walk in.</p></article><article><span class="step-number">02</span><div class="step-art screen-art"><span></span><b>✓</b><i></i><i></i></div><h3>See each check-in</h3><p>The student’s name appears instantly on the teacher’s screen.</p></article><article><span class="step-number">03</span><div class="step-art report-art"><b>26</b><span>/ 30 present</span><i></i><i></i><i></i></div><h3>Close the class</h3><p>After your set time, whodis creates the complete report.</p></article></div>
+      </section>
+      <section class="report reviews" id="results">
+        <div class="report-copy"><p class="eyebrow">SAMPLE REVIEWS <span></span></p><h2>Teachers get their time <em>back.</em></h2><p>A few placeholder notes showing the kind of difference whodis can make when attendance takes seconds instead of minutes.</p><a class="button mint" href="#demo">Try whodis at your school <span>→</span></a></div>
+        <div class="review-stack" aria-label="Sample feedback">
+          <article class="review-card review-one"><span class="quote">“</span><div class="stars">★★★★★</div><blockquote>I can see who’s in the room before I’ve even opened my lesson slides. It’s genuinely that easy.</blockquote><footer><span class="avatar a4">M</span><p><b>Mira Hassan</b><small>Science teacher · Sample review</small></p></footer></article>
+          <article class="review-card review-two"><span class="quote">“</span><div class="stars">★★★★★</div><blockquote>The late list is so helpful. I don’t have to stop class or chase a paper sheet anymore.</blockquote><footer><span class="avatar a5">J</span><p><b>Jayden Lee</b><small>Class teacher · Sample review</small></p></footer></article>
+          <article class="review-card review-three"><span class="quote">“</span><div class="stars">★★★★★</div><blockquote>My students understood the tap-in routine straight away. It makes the morning feel calmer.</blockquote><footer><span class="avatar a6">A</span><p><b>Aisha Rahman</b><small>Year coordinator · Sample review</small></p></footer></article>
+        </div>
+      </section>
+      <section class="why" id="why"><p class="eyebrow">MORE THAN A CHECKMARK <span></span></p><h2>Made for the rhythm<br />of a <em>real school day.</em></h2><div class="why-grid"><article><b>For students</b><p>One familiar tap. No app, password, or extra step needed.</p></article><article><b>For teachers</b><p>Live attendance at a glance, without interrupting the lesson.</p></article><article><b>For schools</b><p>A reliable digital history for every class, every day.</p></article></div></section>
+      <section class="demo" id="demo"><div><p class="eyebrow">READY AT THE NEXT BELL <span></span></p><h2>Make attendance<br />the <em>easy part.</em></h2><p>Ready to bring whodis to your school? Share your email and we’ll send the next steps to buy.</p></div><form action="https://formsubmit.co/l0ffy180511@gmail.com" method="POST"><input type="hidden" name="_subject" value="New whodis buy-now request" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_autoresponse" value="Thanks for choosing whodis. We received your request and will email the next steps to buy soon." /><input type="text" name="_honey" hidden tabindex="-1" autocomplete="off" /><label for="email">SCHOOL EMAIL</label><div class="email-field"><input id="email" name="email" type="email" placeholder="you@school.edu" required /><button type="submit">Buy now <span>→</span></button></div><p class="privacy">We’ll email the next steps to this address.</p></form></section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-dot">w</span>whodis<span class="brand-mark">.</span></a><p>Better attendance starts at the door.</p><div><a href="https://www.instagram.com/whodis.2468/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@sirtv43" target="_blank" rel="noopener noreferrer">TikTok</a><a href="mailto:l0ffy180511@gmail.com">Contact</a></div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
