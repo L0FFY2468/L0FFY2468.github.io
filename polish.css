@@ -52,5 +52,9 @@ body{background-color:#fffaf3;background-image:radial-gradient(circle at 4% 8%,#
 .review-stack{display:grid;gap:13px;min-height:0;padding:0}.review-card{position:relative;width:100%;min-height:174px;top:auto;right:auto;bottom:auto;left:auto}.review-one{transform:rotate(-1.5deg)}.review-two{transform:rotate(1.3deg)}.review-three{transform:rotate(-.8deg)}.review-card footer b{font-size:13px;letter-spacing:-.3px}.review-card footer small{font-size:8px}.review-card footer{bottom:17px}.review-card:hover{transform:scale(1.025) rotate(0deg);z-index:4;transition:transform .2s}
 @media(max-width:760px){.review-stack{min-height:0}.review-card{width:100%;min-height:180px}.review-one,.review-two,.review-three{top:auto;left:auto;right:auto;transform:rotate(0)}.review-card:hover{transform:scale(1.015)}}
 
+/* Match the final school card border to the first two cards. */
+.why-grid article:last-child{border:2px solid #eadff1}
+@media(max-width:760px){.why-grid article:last-child{border:2px solid #eadff1}}
+
 /* Prevent the main site footer styles from leaking into review bylines */
 .review-card footer{position:absolute;bottom:18px;left:24px;display:flex;align-items:center;justify-content:flex-start;gap:9px;width:auto;padding:0!important;margin:0;background:transparent!important;border:0;flex-wrap:nowrap;font-size:inherit}.review-card footer p{margin:0!important;color:#46388d}.review-card footer b{font-size:13px}.review-card footer small{display:block;font-size:8px;color:#706a8a}
