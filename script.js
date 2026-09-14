@@ -1,5 +1,47 @@
 const demoTap = document.querySelector('#demo-tap');
 const recentList = document.querySelector('.recent');
+const music = document.querySelector('#background-music');
+const soundToggle = document.querySelector('#sound-toggle');
+
+if (music && soundToggle) {
+  music.volume = 0.18;
+  const updateSoundControl = (isPlaying) => {
+    soundToggle.classList.toggle('playing', isPlaying);
+    soundToggle.setAttribute('aria-pressed', String(isPlaying));
+    soundToggle.setAttribute('aria-label', isPlaying ? 'Pause background music' : 'Play background music');
+    soundToggle.querySelector('.sound-label').textContent = isPlaying ? 'Sound on' : 'Play sound';
+  };
+  const startMusic = async () => {
+    try {
+      await music.play();
+      updateSoundControl(true);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+  startMusic();
+  const startAfterFirstInteraction = async () => {
+    if (await startMusic()) {
+      document.removeEventListener('pointerdown', startAfterFirstInteraction);
+      document.removeEventListener('keydown', startAfterFirstInteraction);
+      document.removeEventListener('touchstart', startAfterFirstInteraction);
+    }
+  };
+  document.addEventListener('pointerdown', startAfterFirstInteraction, { passive: true });
+  document.addEventListener('keydown', startAfterFirstInteraction);
+  document.addEventListener('touchstart', startAfterFirstInteraction, { passive: true });
+  soundToggle.addEventListener('click', async () => {
+    if (music.paused) {
+      if (!await startMusic()) {
+        soundToggle.querySelector('.sound-label').textContent = 'Sound unavailable';
+      }
+    } else {
+      music.pause();
+      updateSoundControl(false);
+    }
+  });
+}
 
 demoTap?.addEventListener('click', () => {
   if (demoTap.dataset.tapped) return;
